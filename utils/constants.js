@@ -40,11 +40,6 @@ export const criterias = [
       'A categoria de “Pândego do Ano” pretende contemplar alguma figura do Departamento de Engenharia Informática, que durante o presente ano letivo, tenha sido uma mais-valia no domínio da animação sociocultural dos demais colegas. Alguém dotado de humor, intrepidez e um certo rasgo de loucura.',
   },
   {
-    title: 'Investigação',
-    description:
-      'Para a categoria de “Prémio Investigação” será nomeada pela Comissão da Gala Pixel D’Ouro (sob parecer prévio do CISUC) uma figura/grupo e/ou projeto de investigação ao qual se reconheça um elevado mérito na sua contribuição para o DEI e respetiva representação externa nas áreas do saber associadas ao Centro de Investigação do Departamento.',
-  },
-  {
     title: 'Pixel do Ano',
     description:
       'Para a categoria de “Pixel do Ano” será premiado pela Comissão da Gala Pixel d’Ouro uma figura, grupo ou projeto que esteja ou tenha estado ligada ao DEI, e que foi marcante de forma positiva na ou para a comunidade do Departamento de Engenharia Informática no ano afeto à Gala Pixel d’Ouro. Reserva-se à Comissão da Gala Pixel d’Ouro a decisão da existência deste prémio no presente ano, se considerar não existirem condições para tal.',

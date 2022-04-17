@@ -17,6 +17,8 @@
 }
 
 .main input {
+    width: 150%;
+    margin-left: -25%;
     padding: 0.5rem;
     border: none;
     border-bottom: 2px solid #B4903B;
@@ -29,6 +31,11 @@
 
 .main input::placeholder {
     color: #E9DBA8;
+    opacity: 0.5;
+}
+
+.main p {
+    text-align: center;
 }
 
 .main input:-webkit-autofill,
@@ -53,6 +60,34 @@
 .main form button:hover {
     color: #090926;
     background-color: #B4903B;
+}
+
+.error {
+    border: 1px solid red;
+    padding: 1em;
+    color: red;
+    width: 50%;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.info {
+    border: 1px solid greenyellow;
+    padding: 1em;
+    color: greenyellow;
+    width: 50%;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register:first-child {
+    margin-right: 3em;
 }
 
 .register {
