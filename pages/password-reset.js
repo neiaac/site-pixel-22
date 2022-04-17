@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 
 import { useAuth } from '../hooks/useAuth';
 import SignForm from '../components/SignForm';
-import Loading from '../components/Loading';
 
 import styles from '../styles/register.module.css';
 
@@ -17,8 +16,6 @@ export default function ResetPassword() {
         setInfo('');
         if (user?.emailVerified) router.push('/nominations');
     }, [user]);
-
-    if (loading) return <Loading />;
 
     return (
         <main className={styles.main}>
@@ -33,9 +30,9 @@ export default function ResetPassword() {
                     </Link>
                 </div>
                 <div className={styles.register}>
-                    <span>Esqueceu-se da password?</span>
-                    <Link href="/">
-                        <a>Repôr palavra-passe</a>
+                    <span>Ainda não está registado?</span>
+                    <Link href="/register">
+                        <a>Registe-se aqui.</a>
                     </Link>
                 </div>
             </div>

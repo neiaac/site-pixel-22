@@ -57,6 +57,7 @@ function useAuthProvider() {
   };
 
   async function signUp({ email, password }) {
+    setLoading(true);
     setError('');
     setInfo('');
     const realEmail = email.replaceAll('.', ',');
@@ -72,6 +73,7 @@ function useAuthProvider() {
             setUser(null);
             sendEmailVerification(u).then(() => {
               console.log('Sent verification email!');
+              setLoading(false);
               setError('');
               setInfo(`Foi enviado um email de verificação para ${email}. Carrega no link contido nesse email para verificar a tua conta e poderes aceder ao site!`);
             });
@@ -84,10 +86,10 @@ function useAuthProvider() {
   }
 
   async function signIn({ email, password }) {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        console.log(userCredential.user.emailVerified);
-        console.log(userCredential.user);
+        setLoading(false);
         if (userCredential.user.emailVerified) {
           setUser(userCredential.user);
           setError('');
@@ -99,16 +101,22 @@ function useAuthProvider() {
         }
       })
       .catch((e) => {
+        setLoading(false);
         setError('Credenciais inválidas. Tenta outra vez, ou cria uma conta.');
       });
   }
 
   async function resetPassword({ email }) {
+    setLoading(true);
     return sendPasswordResetEmail(auth, email)
-      .then(
+      .then(() => {
+        setError('');
         setInfo(`Enviámos um email para ${email} com um link para repôr a palavra-passe!`)
-      ).catch((e) => {
-        setError(e);
+        setLoading(false);
+      }).catch((e) => {
+        setInfo('');
+        setError('Email inválido. Registe-se, se ainda não o fez, ou tente com outro email.');
+        setLoading(false);
       })
   }
 

@@ -1,8 +1,11 @@
 import { useForm } from 'react-hook-form';
+import { useAuth } from '../hooks/useAuth';
+import spinner from '../images/spinner.gif';
 
 export default function SignForm({ handler, title, reset }) {
 
     const { register, errors, handleSubmit } = useForm();
+    const { loading } = useAuth();
 
     const onSubmit = (data) => {
         console.log(data);
@@ -41,7 +44,11 @@ export default function SignForm({ handler, title, reset }) {
                     {errors?.password !== undefined && (<div>{errors.password.message}</div>)}
                 </div>
             }
-            <button type="submit">{title}</button>
+            {loading ?
+                <button disabled={true} type="submit">A carregar...</button>
+                :
+                <button type="submit">{title}</button>
+            }
         </form>
     )
 }

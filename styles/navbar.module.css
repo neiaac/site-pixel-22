@@ -1,5 +1,6 @@
 .navbar {
   display: flex;
+  justify-content: flex-end;
   gap: 1vw;
   padding: 2.5vh 2.5vw;
 }

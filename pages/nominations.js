@@ -4,9 +4,7 @@ import { useRouter } from 'next/router';
 import { Helmet } from 'react-helmet';
 import { useAuth } from '../hooks/useAuth';
 
-
 import Navbar from '../components/Navbar';
-import Loading from '../components/Loading';
 
 import partner from '../images/partners.png';
 import styles from '../styles/nominations.module.css';
@@ -20,7 +18,7 @@ export default function Nominations() {
     if (!user) router.push('/');
   }, [user]);
 
-  if (loading) return <Loading />
+  if (loading) return <span>A carregar...</span>
   else
     return (
       <main className={styles.main}>

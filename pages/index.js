@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 
 import { useAuth } from '../hooks/useAuth';
 import SignForm from '../components/SignForm';
-import Loading from '../components/Loading';
 
 import styles from '../styles/register.module.css';
 
@@ -17,8 +16,6 @@ export default function Login() {
     setInfo('');
     if (user?.emailVerified) router.push('/nominations');
   }, [user]);
-
-  if (loading) return <Loading />;
 
   return (
     <main className={styles.main}>

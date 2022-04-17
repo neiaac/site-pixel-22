@@ -62,6 +62,14 @@
     background-color: #B4903B;
 }
 
+.main form button:disabled {
+    color: #090926;
+    background-color: grey;
+    border-color: grey;
+    padding: 0.5rem 2rem;
+    cursor: default;
+}
+
 .error {
     border: 1px solid red;
     padding: 1em;
@@ -75,6 +83,15 @@
     border: 1px solid greenyellow;
     padding: 1em;
     color: greenyellow;
+    width: 50%;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.loading {
+    border: 1px solid #B4903B;
+    padding: 1em;
+    color: #B4903B;
     width: 50%;
     text-align: center;
     margin-top: 1.5em;
