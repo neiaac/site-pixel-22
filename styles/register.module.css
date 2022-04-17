@@ -1,0 +1,74 @@
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: url("../images/titleLogin.svg") no-repeat center;
+    background-size: 100%;
+    background-position-y: -10vh;
+}
+
+.main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.main input {
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #B4903B;
+    text-align: center;
+    color: #E9DBA8;
+    background-color: transparent;
+    font-size: 1.25rem;
+    font-family: 'Crimson Pro', serif;
+}
+
+.main input::placeholder {
+    color: #E9DBA8;
+}
+
+.main input:-webkit-autofill,
+.main input:-webkit-autofill:hover,
+.main input:-webkit-autofill:focus,
+.main input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+}
+
+.main form button {
+    margin-top: 4vh;
+    padding: 0.5rem 2rem;
+    border: 2px solid #B4903B;
+    color: #B4903B;
+    background-color: transparent;
+    font-size: 1.25rem;
+    font-family: 'Minion Pro', sans-serif;
+    cursor: pointer;
+}
+
+.main form button:hover {
+    color: #090926;
+    background-color: #B4903B;
+}
+
+.register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 8vh 0;
+    color: #E9DBA8;
+    font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        background: url("../images/titleNomMobile.svg") no-repeat center;
+        background-size: 100%;
+        background-position-y: initial;
+    }
+
+}

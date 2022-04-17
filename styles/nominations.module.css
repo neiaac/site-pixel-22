@@ -1,0 +1,110 @@
+.main section {
+    width: 60%;
+}
+
+.main h2 {
+    margin-bottom: 4vh;
+    font-size: 3rem;
+}
+
+.hero {
+    min-height: 150vh;
+    display: flex;
+    background: url('../images/titleNom.svg') no-repeat top;
+    background-size: 100%;
+}
+
+.info {
+    width: 40%;
+    margin: 80vh 15vw 0 auto;
+}
+
+.info p:not(:last-child) {
+    margin-bottom: 2vh;
+}
+
+.nominate {
+    margin: 15vh auto 30vh;
+    text-align: center;
+}
+
+.nominate h2 {
+    font-size: 4rem;
+}
+
+.criteria {
+    margin: 0 auto;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+}
+
+.categories h4 {
+    margin-bottom: 2vh;
+    color: #B28E3C;
+    font-size: 2rem;
+}
+
+.partners {
+    margin: 30vh auto;
+}
+
+.center {
+    width: 100%;
+    text-align: center;
+}
+
+.regulations {
+    display: block;
+    margin-bottom: 30vh;
+    text-align: center;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .main section {
+        width: 80%;
+    }
+
+    .main h2 {
+        font-size: 2rem;
+    }
+
+    .hero {
+        min-height: initial;
+        background: url('../images/titleNomMobile.svg') no-repeat top;
+        background-size: 100%;
+    }
+
+    .info {
+        width: 80%;
+        margin: 60vh auto 0;
+    }
+
+    .nominate,
+    .partners {
+        margin: 20vh auto;
+    }
+
+    .nominate h2 {
+        margin-bottom: 2vh;
+        font-size: 2rem;
+    }
+
+    .categories {
+        grid-template-columns: 1fr;
+        gap: 6vh;
+    }
+
+    .categories h4 {
+        font-size: 1.5rem;
+    }
+
+    .regulations {
+        margin-bottom: 20vh;
+        font-size: 1.5rem;
+    }
+}

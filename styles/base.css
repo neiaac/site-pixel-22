@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #E9DBA8;
+  background: #090926;
+  font-size: 1.25rem;
+  font-family: 'Crimson Pro', serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: #B4903B;
+  font-family: 'Minion Pro', sans-serif;
+}
+
+a {
+  color: #E9DBA8;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.error {
+  margin-top: 2vh;
+}

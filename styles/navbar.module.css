@@ -1,0 +1,19 @@
+.navbar {
+  display: flex;
+  gap: 1vw;
+  padding: 2.5vh 2.5vw;
+}
+
+.navbar button {
+  border: none;
+  color: #E9DBA8;
+  background-color: transparent;
+  text-decoration: underline;
+  font-size: 1.25rem;
+  font-family: 'Crimson Pro', serif;
+  cursor: pointer;
+}
+
+.navbar button:hover {
+  text-decoration: none;
+}
