@@ -27,6 +27,15 @@ export default function Confirmation() {
                     <p>Número de telemóvel: {enr['phone']}</p>
                     <p>Estatuto académico: {enr['status']}</p>
                     <p>Transporte: {enr['transportation'] == true ? 'Sim' : 'Não'}</p>
+                    <p>Pulseira para o NB: {enr['bracelet'] == true ? 'Sim' : 'Não'}</p>
+                    <p>Acompanhante externo ao DEI: {
+                        enr['plus_one'] == true ? <div>
+                            <p>Sim</p>
+                            <p>Nome do acompanhante: {enr['fullname_plusone']}</p>
+                            <p>Número de telemóvel do acompanhante: {enr['phone_plusone']}</p>
+                            {/* <p>Endereço de email do acompanhante: {enr['email_plusone']}</p> */}
+                        </div> : 'Não'
+                    }</p>
                 </div>
             )
     }

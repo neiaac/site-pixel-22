@@ -10,7 +10,7 @@ export default function Enrollments() {
     const router = useRouter();
     const { register, errors, handleSubmit } = useForm();
     const [enrollment, setEnrollment] = useState(
-        { status: '', transportation: false }
+        { status: '', transportation: false, bracelet: false, plus_one: false }
     )
 
     useEffect(() => {
@@ -91,6 +91,64 @@ export default function Enrollments() {
                     <label htmlFor='transportation'>Não</label>
                     <input type='radio' name='transportation' id='transportation' onChange={handleRadioChange} />
                 </div>
+                <div>
+                    <p>Queres pulseira para o NB?</p>
+                    <label htmlFor='bracelet'>Sim</label>
+                    <input type='radio' name='bracelet' id='bracelet' onChange={handleRadioChange} />
+                    <label htmlFor='bracelet'>Não</label>
+                    <input type='radio' name='bracelet' id='bracelet' onChange={handleRadioChange} />
+                </div>
+                <div>
+                    <p>Levas um acompanhante externo ao DEI?</p>
+                    <label htmlFor='plus_one'>Sim</label>
+                    <input type='radio' name='plus_one' id='plus_one' onChange={handleRadioChange} />
+                    <label htmlFor='plus_one'>Não</label>
+                    <input type='radio' name='plus_one' id='plus_one' onChange={handleRadioChange} />
+                </div>
+                {enrollment.plus_one ? <div>
+                    <div>
+                        <label htmlFor="fullname_plusone">Nome Completo</label>
+                        <br />
+                        <input
+                            id="fullname_plusone"
+                            type='fullname_plusone'
+                            {...register('fullname_plusone', {
+                                required: 'Por favor, insira o seu nome completo',
+                            })}
+                        />
+                        {errors?.fullname_plusone && (<div>{errors?.fullname_plusone.message}</div>)}
+                    </div>
+                    <div>
+                        <label htmlFor="phone_plusone">Número de telemóvel</label>
+                        <br />
+                        <div>
+                            <input
+                                id="phone_plusone"
+                                type="tel"
+                                {...register('phone_plusone', {
+                                    required: 'Por favor, insira seu número de telemóvel',
+                                })}
+                            />
+                            {errors?.phone_plusone !== undefined && (<div>{errors.phone_plusone.message}</div>)}
+                        </div>
+                    </div>
+                    <div>
+                        <label htmlFor="email_plusone">Email do acompanhante</label>
+                        <br />
+                        <input
+                            id="email_plusone"
+                            type="email_plusone"
+                            {...register('email_plusone', {
+                                required: 'Email do acompanhante',
+                                pattern: {
+                                    value: /^\S+@\S+$/i,
+                                    message: 'Email inválido. Por favor, tente outra vez.'
+                                }
+                            })}
+                        />
+                        {errors && (<div>{errors?.email_plusone.message}</div>)}
+                    </div>
+                </div> : null}
                 <div>
                     <button type="submit">Seguinte</button>
                 </div>
