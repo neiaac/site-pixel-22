@@ -12,11 +12,12 @@ export default function Confirmation() {
     const router = useRouter();
 
     useEffect(() => {
-        if (!user) router.push('/');
+        router.push('/');
+        /* if (!user) router.push('/');
         else {
             const cookie = JSON.parse(decodeURIComponent(getCookies('enrollment').enrollment));
             setEnr(cookie);
-        }
+        } */
     }, [])
 
     function displayEnrollment() {

@@ -8,14 +8,15 @@ export default function Success() {
     const router = useRouter();
 
     useEffect(() => {
-        if (!user) router.push('/');
+        router.push('/');
+        /* if (!user) router.push('/'); */
     }, [])
 
     return (
         <div>
             <h1>Sucesso!</h1>
             <p>Obrigado pela tua inscrição</p>
-            <p>Dirige-te à sala do NEI para procederes ao pagamento.</p>
+            <p>Confirma o teu modo de pagamento neste formulário 👉 https://forms.gle/DFAw53RN9F92oJWF7</p>
         </div>
     )
 }
