@@ -1,0 +1,15 @@
+.main{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #090926;
+    color:#E9DBA8;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.5rem;
+}
+
+.formul{
+    color: #E9DBA8;
+}

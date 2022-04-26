@@ -1,0 +1,229 @@
+.main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #090926;
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.25rem;
+    
+}
+
+.main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+.main input:not([type=radio]) {
+    width: 150%;
+    margin-left: -25%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 2px solid #B4903B;
+    text-align: center;
+    color: #E9DBA8;
+    background-color: transparent;
+    font-size: 1.25rem;
+    font-family: 'Crimson Pro', serif;
+}
+
+.main input::placeholder {
+    color: #E9DBA8;
+    opacity: 0.5;
+}
+
+.main p {
+    text-align: center;
+}
+
+.main input:-webkit-autofill,
+.main input:-webkit-autofill:hover,
+.main input:-webkit-autofill:focus,
+.main input:-webkit-autofill:active {
+    -webkit-transition-delay: 9999s;
+    transition-delay: 9999s;
+}
+
+.main form button {
+    margin-top: 4vh;
+    padding: 0.5rem 2rem;
+    border: 2px solid #B4903B;
+    color: #B4903B;
+    background-color: transparent;
+    font-size: 1.25rem;
+    font-family: 'Crimson Pro', sans-serif;
+    cursor: pointer;
+}
+
+.main form button:hover {
+    color: #090926;
+    background-color: #B4903B;
+}
+
+.main form button:disabled {
+    color: #090926;
+    background-color: grey;
+    border-color: grey;
+    padding: 0.5rem 2rem;
+    cursor: default;
+}
+
+.error {
+    border: 1px solid red;
+    padding: 1em;
+    color: red;
+    width: 50%;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.info {
+    border: 1px solid greenyellow;
+    padding: 1em;
+    color: greenyellow;
+    width: 50%;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.loading {
+    border: 1px solid #B4903B;
+    padding: 1em;
+    color: #B4903B;
+    width: 50%;
+    text-align: center;
+    margin-top: 1.5em;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.reg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6vh 0;
+    color: #E9DBA8;
+    font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        background: url("../images/titleNomMobile.svg") no-repeat center;
+        background-size: 100%;
+        background-position-y: initial;
+    }
+}
+
+.persontype {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.persontype > div {
+    display: flex;
+    gap: 3rem;
+}
+
+.bustype {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bustype > div {
+    display: flex;
+    gap: 3rem;
+}
+
+.bustype p {
+    color: #E9DBA8;
+}
+
+.nb {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nb > div {
+    display: flex;
+    gap: 3rem;
+}
+
+.nb p {
+    color: #E9DBA8;
+}
+.external {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.external > div {
+    display: flex;
+    gap: 3rem;
+}
+
+.external p {
+    color: #E9DBA8;
+}
+
+.price{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #E9DBA8;
+}
+
+.main input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+}
+.main input[type="radio"] + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    color: #E9DBA8;
+}
+.main input[type="radio"] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1.125rem;
+    height: 1.125rem;
+    border: 1px solid #B4903B;
+    background: transparent;
+}
+.main input[type="radio"] + label:after {
+    content: '';
+    width: 0.75rem;
+    height: 0.75rem;
+    background: #B4903B;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.main input[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+.main input[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}

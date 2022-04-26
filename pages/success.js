@@ -1,22 +1,32 @@
-import { useEffect } from "react";
-import { useAuth } from "../hooks/useAuth";
-import { useRouter } from "next/router";
+
+
+import styles from '../styles/success.module.css';
+
 
 export default function Success() {
-
-    const { user } = useAuth();
-    const router = useRouter();
-
-    useEffect(() => {
-        router.push('/');
-        /* if (!user) router.push('/'); */
-    }, [])
-
     return (
-        <div>
-            <h1>Sucesso!</h1>
-            <p>Obrigado pela tua inscrição</p>
-            <p>Confirma o teu modo de pagamento neste formulário 👉 https://forms.gle/DFAw53RN9F92oJWF7</p>
-        </div>
+        
+        <main className={styles.main}>
+            <form>
+                <div className={styles.title}>
+                    <p>Obrigada pela tua inscrição!</p>
+                </div>
+                <div>
+                    <p>Já te encontras inscrito para a Gala Pixel d’Ouro.</p>
+                </div>
+
+                <div>
+                    <p>Qualquer dúvida por favor dirige-te à sala do NEI, ou entra em contacto connosco.</p>
+                </div>
+                <div className={styles.end}>
+                    <p>neiaac@student.dei.uc.pt</p>
+                    <p>Morada NEI/DEI</p>
+                </div>
+            
+            </form>
+        </main>
+
+       
+        
     )
 }
