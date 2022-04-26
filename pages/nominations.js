@@ -16,7 +16,6 @@ export default function Nominations() {
 
   useEffect(() => {
     if (!user) router.push('/');
-    else router.push('/enrollments')
   }, [user]);
 
   if (loading) return <span>A carregar...</span>
