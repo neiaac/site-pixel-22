@@ -24,10 +24,17 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
+
+# exclude pages that aren't ment to be released yet
+# this is on purpose, so that people can't access them
+pages/confirmation.js
+pages/enrollments.js
+pages/success.js
 
 # exclude private info
 utils/*.txt

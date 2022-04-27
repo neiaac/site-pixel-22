@@ -1,0 +1,36 @@
+.main {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #090926 url("../images/titleEnroll.svg") no-repeat center;
+    background-size: 100%;
+    background-position-y: 5vh;
+    text-align: center;
+}
+
+.main h1 {
+    font-size: 2rem;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+    margin-bottom: 6vh;
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        min-height: 100vh;
+        background: #090926 url("../images/titleEnrollMobile.svg") no-repeat center;
+        background-size: 100%;
+        background-position-y: 10vh;
+    }
+
+    .main .info {
+        width: 90%;
+        margin: 0 auto 6vh;
+    }
+}

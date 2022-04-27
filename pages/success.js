@@ -1,22 +1,28 @@
-import { useEffect } from "react";
-import { useAuth } from "../hooks/useAuth";
-import { useRouter } from "next/router";
+import { Helmet } from 'react-helmet';
+
+import Navbar from '../components/Navbar';
+
+import { main, info } from '../styles/success.module.css';
 
 export default function Success() {
-
-    const { user } = useAuth();
-    const router = useRouter();
-
-    useEffect(() => {
-        router.push('/');
-        /* if (!user) router.push('/'); */
-    }, [])
-
-    return (
+  return (
+    <main className={main}>
+      <Helmet>
+        <title>Pixel d'Ouro 2022</title>
+      </Helmet>
+      <Navbar />
+      <div className={info}>
+        <h1>Obrigada pela tua inscrição!</h1>
+        <p>Já te encontras inscrito para a Gala Pixel d’Ouro.</p>
         <div>
-            <h1>Sucesso!</h1>
-            <p>Obrigado pela tua inscrição</p>
-            <p>Confirma o teu modo de pagamento neste formulário 👉 https://forms.gle/DFAw53RN9F92oJWF7</p>
+          <p>Qualquer dúvida por favor dirige-te à sala do NEI,</p>
+          <p>ou entra em contacto connosco.</p>
         </div>
-    )
+        <div>
+          <p>neiaac@student.dei.uc.pt</p>
+          <p>Morada NEI/DEI</p>
+        </div>
+      </div>
+    </main>
+  );
 }
