@@ -1,9 +1,10 @@
+import { useEffect } from 'react';
 import Link from 'next/link';
 
 import SignForm from '../components/SignForm';
-import styles from '../styles/register.module.css';
 import { useAuth } from '../hooks/useAuth';
-import { useEffect } from 'react';
+
+import { main, options } from '../styles/register.module.css';
 
 export default function Register() {
   const { info, error, signUp, setError, setInfo } = useAuth();
@@ -11,21 +12,21 @@ export default function Register() {
   useEffect(() => {
     setError('');
     setInfo('');
-  }, [])
+  }, []);
 
   return (
-    <main className={styles.main}>
+    <main className={main}>
       <SignForm handler={signUp} title="Registar" reset={false} />
-      {error && <span className={styles.error}>{error}</span>}
-      {info && <span className={styles.info}>{info}</span>}
-      <div className={styles.options}>
-        <div className={styles.register}>
+      {error && <span className="error">{error}</span>}
+      {info && <span className="info">{info}</span>}
+      <div className={options}>
+        <div>
           <span>Já está registado?</span>
           <Link href="/">
             <a>Entre aqui.</a>
           </Link>
         </div>
-        <div className={styles.register}>
+        <div>
           <span>Esqueceu-se da password?</span>
           <Link href="/password-reset">
             <a>Repôr palavra-passe</a>

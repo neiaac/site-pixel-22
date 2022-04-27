@@ -1,15 +1,53 @@
-.main{
-    height: 100vh;
+.main {
+    min-height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #090926 url("../images/titleEnroll.svg") no-repeat center;
+    background-size: 100%;
+    background-position-y: 5vh;
+    text-align: center;
+}
+
+.info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    background-color: #090926;
-    color:#E9DBA8;
-    font-family: 'Crimson Pro', serif;
-    font-size: 1.5rem;
+    gap: 2vh;
 }
 
-.formul{
-    color: #E9DBA8;
+.main h1,
+.main h2 {
+    font-weight: normal;
+    font-size: 1.25rem;
+}
+
+.main h2 {
+    margin-bottom: 1vh;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    margin: 2vh 0 6vh;
+}
+
+@media only screen and (max-width: 800px) {
+    .main {
+        background: #090926 url("../images/titleEnrollMobile.svg") no-repeat center;
+        background-size: 100%;
+        background-position-y: 10vh;
+    }
+
+    .main .info {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .main {
+        min-height: 170vh;
+    }
 }
