@@ -34,7 +34,7 @@ export default function Login() {
             <a>Repôr palavra-passe</a>
           </Link>
         </div>
-        <div className={styles.register}>
+        <div>
           <span>É ex-aluno do DEI, investigador ou funcionário?</span>
           <Link href="/enrollments">
             <a>Inscreva-se aqui!</a>

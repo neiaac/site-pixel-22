@@ -12,10 +12,6 @@ export default function Enrollments() {
     const router = useRouter();
     const { register, errors, handleSubmit, control } = useForm();
 
-    /* useEffect(() => {
-        /* if (!user)  router.push('/'); 
-    }, []) */
-
     const onSubmit = (data) => {
         setCookies('enrollment', JSON.stringify(data));
         router.push('/confirmation');
