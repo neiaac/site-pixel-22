@@ -3,8 +3,6 @@ import { useForm, useWatch } from 'react-hook-form';
 import { useRouter } from 'next/router';
 import { setCookies } from 'cookies-next';
 import { Helmet } from 'react-helmet';
-import { useEffect } from 'react';
-import { useAuth } from '../hooks/useAuth';
 
 import Navbar from '../components/Navbar';
 
@@ -13,16 +11,10 @@ import { main, radios } from '../styles/enrollments.module.css';
 export default function Enrollments() {
     const router = useRouter();
     const { register, errors, handleSubmit, control } = useForm();
-    const { user } = useAuth();
-
-    useEffect(() => {
-        if (!user?.emailVerified) router.push('/');
-    }, [user])
-
 
     const onSubmit = (data) => {
         setCookies('enrollment', JSON.stringify(data));
-        router.push('/confirmation');
+        router.push('/confirmation-extra');
     };
 
     const plusone = useWatch({
@@ -37,6 +29,19 @@ export default function Enrollments() {
             </Helmet>
             <Navbar />
             <form onSubmit={handleSubmit(onSubmit)}>
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="Email"
+                    {...register('email', {
+                        required: 'Email',
+                        pattern: {
+                            value: /^\S+@\S+$/i,
+                            message: 'Email inválido. Por favor, tente outra vez.',
+                        },
+                    })}
+                />
+                {errors && <p>{errors?.email.message}</p>}
                 <input
                     id="fullname"
                     type="text"
