@@ -14,7 +14,7 @@ export default function Login() {
   useEffect(() => {
     setError('');
     setInfo('');
-    if (user?.emailVerified) router.push('/nominations');
+    if (user?.emailVerified) router.push('/enrollments');
   }, [user]);
 
   return (
@@ -31,6 +31,12 @@ export default function Login() {
         <div className={styles.register}>
           <span>Esqueceu-se da password?</span>
           <Link href="/password-reset">
+            <a>Repôr palavra-passe</a>
+          </Link>
+        </div>
+        <div className={styles.register}>
+          <span>Inscrições alunos ex-DEI, investigadores e funcionários</span>
+          <Link href="/enrollments">
             <a>Repôr palavra-passe</a>
           </Link>
         </div>

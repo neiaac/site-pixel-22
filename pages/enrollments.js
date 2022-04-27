@@ -14,7 +14,7 @@ export default function Enrollments() {
     )
 
     useEffect(() => {
-        /* if (!user) */ router.push('/');
+        /* if (!user)  router.push('/'); */
     }, [])
 
 
