@@ -8,7 +8,7 @@ export default function Navbar({ isHome }) {
 
   return (
     <nav className={navbar}>
-      <Link href={isHome ? '/success' : '/index'}>
+      <Link href={isHome ? '/success' : '/nominations'}>
         <a>{isHome ? 'Pagamento' : 'Home'}</a>
       </Link>
       <div>
