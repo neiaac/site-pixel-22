@@ -14,7 +14,7 @@ export default function Login() {
   useEffect(() => {
     setError('');
     setInfo('');
-    if (user?.emailVerified) router.push('/enrollments');
+    if (user?.emailVerified) router.push('/nominations');
   }, [user]);
 
   return (

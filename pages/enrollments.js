@@ -16,8 +16,9 @@ export default function Enrollments() {
     const { user } = useAuth();
 
     useEffect(() => {
-        if (!user?.emailVerified) router.push('/');
-    }, [user])
+        /* if (!user?.emailVerified) router.push('/'); */
+        router.push('/nominations');
+    }, [/* user */])
 
 
     const onSubmit = (data) => {
