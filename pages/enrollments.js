@@ -107,30 +107,6 @@ export default function Enrollments() {
                         </div>
                     </div>
                 </div>
-
-                <div className={radios}>
-                    <p>Precisas de transporte até à Gala?</p>
-                    <div>
-                        <div>
-                            <input
-                                type="radio"
-                                value="Sim"
-                                id="yes_transportation"
-                                {...register('transportation')}
-                            />
-                            <label htmlFor="yes_transportation">Sim</label>
-                        </div>
-                        <div>
-                            <input
-                                type="radio"
-                                value="Não"
-                                id="no_transportation"
-                                {...register('transportation')}
-                            />
-                            <label htmlFor="no_transportation">Não</label>
-                        </div>
-                    </div>
-                </div>
                 <div className={radios}>
                     <p>Queres pulseira para o NB?</p>
                     <div>
@@ -210,11 +186,11 @@ export default function Enrollments() {
                 )}
                 <div>
                     <p>
-                        O preço da Gala Pixel D’Ouro será de 27€ para estudantes do DEI, 30€
+                        O preço da Gala Pixel D'Ouro será de 27€ para estudantes do DEI, 30€
                         para Ex-estudantes e 32€ para acompanhantes.
                     </p>
                     <p>
-                        Este preço inclui aperitivos, transporte, jantar, after e pulseira
+                        Este preço inclui aperitivos, jantar, after e pulseira
                         para NB.
                     </p>
                 </div>
