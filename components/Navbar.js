@@ -8,8 +8,8 @@ export default function Navbar({ isHome }) {
 
   return (
     <nav className={navbar}>
-      <Link href={isHome ? '/success' : '/success'}>
-        <a>{isHome ? 'Home' : 'Pagamento'}</a>
+      <Link href={isHome ? '/success' : '/index'}>
+        <a>{isHome ? 'Pagamento' : 'Home'}</a>
       </Link>
       <div>
         <span>{user?.email}</span>
