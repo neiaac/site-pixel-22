@@ -9,7 +9,7 @@ export default function Navbar({ isHome }) {
   return (
     <nav className={navbar}>
       <Link href={isHome ? '/success' : '/success'}>
-        <a>{isHome ? 'Pagamento' : 'Pagamento'}</a>
+        <a>{isHome ? 'Home' : 'Pagamento'}</a>
       </Link>
       <div>
         <span>{user?.email}</span>
