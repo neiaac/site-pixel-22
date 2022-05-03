@@ -12,7 +12,7 @@ export default function Success() {
       <Helmet>
         <title>Pixel d'Ouro 2022</title>
       </Helmet>
-      <Navbar isHome/>
+      <Navbar />
       <div className={info}>
         <h1>Obrigada pela tua inscrição!</h1>
         <p>Se já te inscreveste, paga presencialmente na sala do NEI (C4.3) ou paga online através do link abaixo:</p>
