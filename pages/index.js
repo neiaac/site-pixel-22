@@ -35,9 +35,9 @@ export default function Login() {
           </Link>
         </div>
         <div>
-          <span>É ex-aluno do DEI, investigador ou funcionário?</span>
-          <Link href="/enrollments-extra">
-            <a>Inscreva-se aqui!</a>
+          <span>É ex-aluno do DEI, investigador ou funcionário e já se inscreveu?</span>
+          <Link href="/success">
+            <a>Pague aqui!</a>
           </Link>
         </div>
       </div>
