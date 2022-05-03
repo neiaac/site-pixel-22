@@ -15,10 +15,11 @@ export default function Confirmation() {
   const { user } = useAuth();
 
   useEffect(() => {
-    const cookie = JSON.parse(
+    /* const cookie = JSON.parse(
       decodeURIComponent(getCookies('enrollment').enrollment)
     );
-    cookie ? setEnr(cookie) : router.push('/enrollments');
+    cookie ? setEnr(cookie) : router.push('/enrollments'); */
+    router.push('/');
   }, []);
 
   const submitEnrollment = () => {

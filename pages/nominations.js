@@ -26,7 +26,7 @@ export default function Nominations() {
 
   if (loading) return <span>A carregar...</span>;
 
-  if (user.email == 'manuelfideles77@gmail.com' && participantData !== undefined) {
+  if (user?.email == 'manuelfideles77@gmail.com' && participantData !== undefined) {
     let partArray = []
     for (const [k, v] of Object.entries(participantData)) {
       if (v != []) {
@@ -41,14 +41,13 @@ export default function Nominations() {
       }
       else partArray.push([k, v]);
     }
-    // console.log(partArray);
-
-    /* return (
-      <span>buceta</span>
-    ) */
 
     return (
       <>
+        <Helmet>
+          <title>Pixel d'Ouro 2022</title>
+        </Helmet>
+        <Navbar isHome />
         <CsvDownload
           data={partArray}
           filename="participants.csv"
@@ -72,10 +71,7 @@ export default function Nominations() {
           </div>
         </div>
         <section className={styles.nominate}>
-          <h2>Nomeações já estão abertas.</h2>
-          <Link href="https://forms.gle/oKEizirKLyNSKFwf7">
-            <a target="_blank">Acede aqui.</a>
-          </Link>
+          <h2>Nomeações já fecharam!</h2>
         </section>
         <section className={styles.criteria}>
           <h2>Critérios</h2>

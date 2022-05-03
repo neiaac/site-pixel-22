@@ -15,8 +15,7 @@ export default function Success() {
       <Navbar />
       <div className={info}>
         <h1>Obrigada pela tua inscrição!</h1>
-        <p>Já te encontras inscrito para a Gala Pixel d'Ouro.</p>
-        <p>Paga presencialmente na sala do NEI (C4.3) ou paga online através do link abaixo:</p>
+        <p>Se já te inscreveste, paga presencialmente na sala do NEI (C4.3) ou paga online através do link abaixo:</p>
         <Link href="https://forms.gle/DFAw53RN9F92oJWF7">
           <a>Pagar online.</a>
         </Link>
